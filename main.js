@@ -1,5 +1,4 @@
-const socket = io('http://192.168.18.4:3000');
-// const socket = io('http://192.168.43.89:3000');
+const socket = io('https://young-ocean-55252.herokuapp.com/');
 
 socket.on('dm', handleDm);
 socket.on('nameTaken', handleNameTaken);
@@ -49,7 +48,6 @@ function dmTo() {
 }
 function handlestat(data) {
     let dat = JSON.parse(data);
-    console.log(dat.feedback);
     if (dat.feedback) {
         if (dat.stat) {
             document.getElementById('_stat').style.backgroundColor = "greenyellow";
